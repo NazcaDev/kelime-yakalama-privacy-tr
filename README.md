@@ -1,4 +1,6 @@
-Gizlilik Politikası (Çocuklara Uygun)
+Türkçe 🇹🇷
+
+Gizlilik Politikası
 
 Kelime Yakalama uygulaması, Nazca Rieche (“Hizmet Sağlayıcı”) tarafından Açık Kaynak olarak sunulmaktadır ve olduğu gibi (AS IS) kullanılmaktadır. Uygulama çocuklar dahil tüm yaş grupları için uygundur.
 
@@ -72,5 +74,85 @@ Yürürlük tarihi: 11.01.2026
 İletişim
 
 Gizlilikle ilgili her türlü soru için:
+
+📧 nazcadev@outlook.com
+
+
+English 🇬🇧
+
+Privacy Policy
+
+The Kelime Yakalama application is provided as an Open Source service by Nazca Rieche (“Service Provider”) and is offered AS IS. The Application is suitable for all age groups, including children.
+
+Information Collection
+
+While using the Application, the following information may be collected automatically:
+
+Internet Protocol (IP) address
+
+In-app usage data (screens visited, date/time, duration of use)
+
+Total time spent in the Application
+
+Mobile device operating system
+
+The Application does not collect precise location data.
+
+The Application does not knowingly request or collect personally identifiable information (such as name, surname, email address, or phone number) from children.
+
+Use of Information
+
+The collected information is used solely for the following purposes:
+
+To ensure the proper functioning of the Application
+
+To perform performance monitoring and error analysis
+
+To improve the user experience
+
+This data is not used for advertising targeting or user profiling.
+
+Third-Party Services
+
+The Application may use the following third-party services, which process only aggregated and anonymized data and are subject to their own privacy policies:
+
+Google Play Services
+
+AdMob
+
+Google Analytics for Firebase
+
+Firebase Crashlytics
+
+For child-directed content, Google’s Families / COPPA-compliant policies are applied.
+
+Data Retention and Deletion
+
+Data is retained for as long as the Application is in use and for a reasonable period thereafter.
+To request deletion of data, please contact:
+
+📧 nazcadev@outlook.com
+
+Children’s Privacy
+
+The Application places a high priority on protecting children’s privacy.
+No personal data is knowingly collected from children. If it is discovered that such data has been collected unintentionally, it will be deleted immediately.
+
+Parents or legal guardians may contact the Service Provider regarding any privacy-related concerns involving their children.
+
+Security
+
+The Service Provider implements appropriate technical and administrative safeguards to protect the information processed and stored.
+
+Changes
+
+This Privacy Policy may be updated from time to time. The current version will always be published on this page.
+Continued use of the Application constitutes acceptance of any changes.
+
+Effective date: January 11, 2026
+
+Contact Us
+
+If you have any questions regarding privacy while using the Application, please contact the Service Provider at:
 
 📧 nazcadev@outlook.com
