@@ -200,22 +200,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
         
-        .brand-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #e06738, #518b82);
-            border-radius: 10px;
+        .app-logo {
+            height: 70px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .app-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-title {
+            margin-top: 10px;
+            color: #518b82;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         
         .section-divider {
@@ -251,7 +263,33 @@
             
             .brand-header {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+            }
+            
+            .app-logo {
+                height: 60px;
+            }
+            
+            .logo-title {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .app-logo {
+                height: 50px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -259,17 +297,23 @@
 <body>
     <header>
         <div class="brand-header">
-            <div class="brand-icon">KY</div>
+            <div class="logo-container">
+                <!-- GitHub'daki logo -->
+                <img src="https://raw.githubusercontent.com/NazcaDev/kelime-yakalama-privacy/main/logo.png" 
+                     alt="Kelime Yakalama Logo" 
+                     class="app-logo">
+                <div class="logo-title">Kelime Yakalama</div>
+            </div>
             <div>
-                <h1>Kelime Yakalama</h1>
-                <p class="subtitle">Gizlilik Politikası</p>
+                <h1>Gizlilik Politikası</h1>
+                <p class="subtitle">Uygulama kullanım koşulları ve veri güvenliği</p>
             </div>
         </div>
         
         <div class="color-swatch">
-            <div class="color-box color-1" title="#e06738"></div>
-            <div class="color-box color-2" title="#b8f2e3"></div>
-            <div class="color-box color-3" title="#518b82"></div>
+            <div class="color-box color-1" title="#e06738 - Turuncu"></div>
+            <div class="color-box color-2" title="#b8f2e3 - Açık Turkuaz"></div>
+            <div class="color-box color-3" title="#518b82 - Turkuaz Yeşil"></div>
         </div>
         
         <div class="language-switcher">
@@ -486,11 +530,33 @@
             document.getElementById('en-content').classList.add('active');
         }
         
+        // Logo yükleme kontrolü
+        window.addEventListener('load', function() {
+            const logo = document.querySelector('.app-logo');
+            logo.addEventListener('error', function() {
+                console.log('Logo yüklenemedi, alternatif gösteriliyor.');
+                this.style.display = 'none';
+                // Alternatif olarak metin logo göster
+                const logoContainer = document.querySelector('.logo-container');
+                const altLogo = document.createElement('div');
+                altLogo.className = 'brand-icon';
+                altLogo.textContent = 'KY';
+                altLogo.style.margin = '0 auto';
+                logoContainer.insertBefore(altLogo, logoContainer.firstChild);
+            });
+            
+            // Logo başarıyla yüklendiğinde
+            logo.addEventListener('load', function() {
+                console.log('Logo başarıyla yüklendi:', this.src);
+            });
+        });
+        
         // Renk paletini göster
         console.log("Kullanılan renk paleti:");
         console.log("- Ana renk (turuncu): #e06738");
         console.log("- Açık renk (açık turkuaz): #b8f2e3");
         console.log("- Koyu renk (turkuaz-yeşil): #518b82");
+        console.log("Logo URL: https://raw.githubusercontent.com/NazcaDev/kelime-yakalama-privacy/main/logo.png");
     </script>
 </body>
 </html>
