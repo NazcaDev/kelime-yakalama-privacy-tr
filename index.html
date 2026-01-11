@@ -24,15 +24,15 @@
         header {
             text-align: center;
             padding: 30px 0;
-            border-bottom: 1px solid #e0e0e0;
             margin-bottom: 30px;
             background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #e06738;
         }
         
         h1 {
-            color: #2c3e50;
+            color: #518b82;
             margin-bottom: 10px;
             font-size: 2.2rem;
         }
@@ -51,7 +51,7 @@
         
         .lang-btn {
             padding: 12px 25px;
-            background-color: #3498db;
+            background-color: #518b82;
             color: white;
             border: none;
             border-radius: 6px;
@@ -65,13 +65,13 @@
         }
         
         .lang-btn:hover {
-            background-color: #2980b9;
+            background-color: #3a6a63;
             transform: translateY(-2px);
         }
         
         .lang-btn.active {
-            background-color: #2c3e50;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #e06738;
+            box-shadow: 0 4px 8px rgba(224, 103, 56, 0.2);
         }
         
         .content-section {
@@ -81,6 +81,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
             margin-bottom: 30px;
             display: none;
+            border-left: 4px solid #518b82;
         }
         
         .content-section.active {
@@ -94,17 +95,19 @@
         }
         
         h2 {
-            color: #2c3e50;
+            color: #518b82;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 2px solid #b8f2e3;
             font-size: 1.8rem;
         }
         
         h3 {
-            color: #34495e;
+            color: #3a6a63;
             margin: 25px 0 15px;
             font-size: 1.4rem;
+            padding-left: 10px;
+            border-left: 3px solid #e06738;
         }
         
         p {
@@ -123,11 +126,12 @@
         }
         
         .highlight {
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
+            background-color: #b8f2e3;
+            border-left: 4px solid #518b82;
             padding: 15px;
             margin: 20px 0;
             border-radius: 0 5px 5px 0;
+            color: #333;
         }
         
         .contact-info {
@@ -138,6 +142,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            border-left: 4px solid #e06738;
         }
         
         .flag {
@@ -146,22 +151,78 @@
         }
         
         .effective-date {
-            background-color: #2c3e50;
+            background-color: #e06738;
             color: white;
             padding: 12px 20px;
             border-radius: 6px;
             display: inline-block;
             margin: 15px 0;
             font-weight: bold;
+            box-shadow: 0 3px 6px rgba(224, 103, 56, 0.2);
         }
         
         footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid #ddd;
             color: #7f8c8d;
             font-size: 0.95rem;
+        }
+        
+        .color-swatch {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0 25px;
+            gap: 5px;
+        }
+        
+        .color-box {
+            width: 60px;
+            height: 30px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .color-1 {
+            background-color: #e06738;
+        }
+        
+        .color-2 {
+            background-color: #b8f2e3;
+        }
+        
+        .color-3 {
+            background-color: #518b82;
+        }
+        
+        .brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .brand-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e06738, #518b82);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, #e06738, #b8f2e3, #518b82);
+            margin: 25px 0;
+            border-radius: 3px;
         }
         
         @media (max-width: 768px) {
@@ -187,13 +248,29 @@
                 max-width: 300px;
                 justify-content: center;
             }
+            
+            .brand-header {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Kelime Yakalama</h1>
-        <p class="subtitle">Gizlilik Politikası</p>
+        <div class="brand-header">
+            <div class="brand-icon">KY</div>
+            <div>
+                <h1>Kelime Yakalama</h1>
+                <p class="subtitle">Gizlilik Politikası</p>
+            </div>
+        </div>
+        
+        <div class="color-swatch">
+            <div class="color-box color-1" title="#e06738"></div>
+            <div class="color-box color-2" title="#b8f2e3"></div>
+            <div class="color-box color-3" title="#518b82"></div>
+        </div>
         
         <div class="language-switcher">
             <button class="lang-btn active" data-lang="tr">
@@ -212,6 +289,8 @@
             
             <p>Kelime Yakalama uygulaması, Nazca Rieche ("Hizmet Sağlayıcı") tarafından Açık Kaynak olarak sunulmaktadır ve olduğu gibi (AS IS) kullanılmaktadır. Uygulama çocuklar dahil tüm yaş grupları için uygundur.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Toplanan Bilgiler</h3>
             <p>Uygulama kullanımı sırasında aşağıdaki bilgiler otomatik olarak toplanabilir:</p>
             <ul>
@@ -223,6 +302,8 @@
             <p>Uygulama kesin konum bilgisi toplamaz.</p>
             <p>Uygulama, çocuklardan bilerek kişisel olarak tanımlanabilir bilgi (ad, soyad, e-posta, telefon numarası vb.) talep etmez.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Bilgilerin Kullanımı</h3>
             <p>Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:</p>
             <ol>
@@ -232,6 +313,8 @@
             </ol>
             <p>Bu veriler reklam hedefleme veya profil oluşturma amacıyla kullanılmaz.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Üçüncü Taraf Hizmetleri</h3>
             <p>Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanabilir. Bu hizmetler yalnızca anonim ve toplu veriler işler ve kendi gizlilik politikalarına tabidir:</p>
             <ul>
@@ -240,7 +323,11 @@
                 <li>Google Analytics for Firebase</li>
                 <li>Firebase Crashlytics</li>
             </ul>
-            <p>Çocuklara yönelik içeriklerde Google'ın çocuklara uygun (Families / COPPA uyumlu) politikaları esas alınır.</p>
+            <div class="highlight">
+                <p>Çocuklara yönelik içeriklerde Google'ın çocuklara uygun (Families / COPPA uyumlu) politikaları esas alınır.</p>
+            </div>
+            
+            <div class="section-divider"></div>
             
             <h3>Veri Saklama ve Silme</h3>
             <p>Veriler, uygulama kullanıldığı sürece ve sonrasında makul bir süre saklanır. Verilerin silinmesini talep etmek için:</p>
@@ -248,17 +335,25 @@
                 <span>📧</span> <strong>nazcadev@outlook.com</strong>
             </div>
             
+            <div class="section-divider"></div>
+            
             <h3>Çocukların Gizliliği</h3>
             <p>Uygulama, çocukların gizliliğini korumayı esas alır. Çocuklardan bilerek kişisel veri toplanmaz. Yanlışlıkla böyle bir veri toplandığının fark edilmesi hâlinde, ilgili veriler derhal silinir.</p>
             <p>Ebeveyn veya yasal vasiyseniz ve çocuğunuzla ilgili bir gizlilik talebiniz varsa, bizimle iletişime geçebilirsiniz.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Güvenlik</h3>
             <p>Hizmet Sağlayıcı, işlenen bilgileri korumak için uygun teknik ve idari güvenlik önlemleri uygular.</p>
+            
+            <div class="section-divider"></div>
             
             <h3>Değişiklikler</h3>
             <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlanır. Uygulamayı kullanmaya devam etmeniz, yapılan değişiklikleri kabul ettiğiniz anlamına gelir.</p>
             
             <div class="effective-date">Yürürlük tarihi: 11.01.2026</div>
+            
+            <div class="section-divider"></div>
             
             <h3>İletişim</h3>
             <p>Gizlilikle ilgili her türlü soru için:</p>
@@ -273,6 +368,8 @@
             
             <p>The Kelime Yakalama application is provided as an Open Source service by Nazca Rieche ("Service Provider") and is offered AS IS. The Application is suitable for all age groups, including children.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Information Collection</h3>
             <p>While using the Application, the following information may be collected automatically:</p>
             <ul>
@@ -284,6 +381,8 @@
             <p>The Application does not collect precise location data.</p>
             <p>The Application does not knowingly request or collect personally identifiable information (such as name, surname, email address, or phone number) from children.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Use of Information</h3>
             <p>The collected information is used solely for the following purposes:</p>
             <ol>
@@ -293,6 +392,8 @@
             </ol>
             <p>This data is not used for advertising targeting or user profiling.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Third-Party Services</h3>
             <p>The Application may use the following third-party services, which process only aggregated and anonymized data and are subject to their own privacy policies:</p>
             <ul>
@@ -301,7 +402,11 @@
                 <li>Google Analytics for Firebase</li>
                 <li>Firebase Crashlytics</li>
             </ul>
-            <p>For child-directed content, Google's Families / COPPA-compliant policies are applied.</p>
+            <div class="highlight">
+                <p>For child-directed content, Google's Families / COPPA-compliant policies are applied.</p>
+            </div>
+            
+            <div class="section-divider"></div>
             
             <h3>Data Retention and Deletion</h3>
             <p>Data is retained for as long as the Application is in use and for a reasonable period thereafter. To request deletion of data, please contact:</p>
@@ -309,17 +414,25 @@
                 <span>📧</span> <strong>nazcadev@outlook.com</strong>
             </div>
             
+            <div class="section-divider"></div>
+            
             <h3>Children's Privacy</h3>
             <p>The Application places a high priority on protecting children's privacy. No personal data is knowingly collected from children. If it is discovered that such data has been collected unintentionally, it will be deleted immediately.</p>
             <p>Parents or legal guardians may contact the Service Provider regarding any privacy-related concerns involving their children.</p>
             
+            <div class="section-divider"></div>
+            
             <h3>Security</h3>
             <p>The Service Provider implements appropriate technical and administrative safeguards to protect the information processed and stored.</p>
+            
+            <div class="section-divider"></div>
             
             <h3>Changes</h3>
             <p>This Privacy Policy may be updated from time to time. The current version will always be published on this page. Continued use of the Application constitutes acceptance of any changes.</p>
             
             <div class="effective-date">Effective date: January 11, 2026</div>
+            
+            <div class="section-divider"></div>
             
             <h3>Contact Us</h3>
             <p>If you have any questions regarding privacy while using the Application, please contact the Service Provider at:</p>
@@ -372,6 +485,12 @@
             document.getElementById('tr-content').classList.remove('active');
             document.getElementById('en-content').classList.add('active');
         }
+        
+        // Renk paletini göster
+        console.log("Kullanılan renk paleti:");
+        console.log("- Ana renk (turuncu): #e06738");
+        console.log("- Açık renk (açık turkuaz): #b8f2e3");
+        console.log("- Koyu renk (turkuaz-yeşil): #518b82");
     </script>
 </body>
 </html>
