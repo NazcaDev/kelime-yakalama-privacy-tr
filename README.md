@@ -1,40 +1,24 @@
-Türkçe 🇹🇷
+🇹🇷 Kullanım Şartları (Çocuklara Uygun)
+Şartlar ve Koşullar
 
-Gizlilik Politikası
+Bu şartlar ve koşullar, Nazca Rieche (“Hizmet Sağlayıcı”) tarafından Açık Kaynak bir hizmet olarak sunulan Kelime Yakalama mobil uygulaması (“Uygulama”) için geçerlidir.
 
-Kelime Yakalama uygulaması, Nazca Rieche (“Hizmet Sağlayıcı”) tarafından Açık Kaynak olarak sunulmaktadır ve olduğu gibi (AS IS) kullanılmaktadır. Uygulama çocuklar dahil tüm yaş grupları için uygundur.
+Uygulamayı indirerek veya kullanarak, bu şartları kabul etmiş olursunuz. Uygulamayı kullanmadan önce bu şartları dikkatlice okumanız önerilir.
 
-Toplanan Bilgiler
+Hizmetin Kapsamı
 
-Uygulama kullanımı sırasında aşağıdaki bilgiler otomatik olarak toplanabilir:
+Hizmet Sağlayıcı, Uygulamanın faydalı ve verimli olmasını amaçlar. Bu doğrultuda, Uygulamayı dilediği zaman değiştirme, güncelleme veya sonlandırma hakkını saklı tutar. Uygulama veya hizmetler için ücret talep edilmesi durumunda, bu durum kullanıcıya açıkça bildirilecektir.
 
-IP adresi
+Veri ve Güvenlik
 
-Uygulama içi kullanım verileri (ziyaret edilen ekranlar, tarih/saat, geçirilen süre)
+Uygulama, hizmetin sunulabilmesi amacıyla sınırlı bazı verileri işleyebilir.
+Cihazınızın ve Uygulamaya erişimin güvenliğini sağlamak sizin sorumluluğunuzdadır.
 
-Uygulamada geçirilen toplam süre
-
-Cihaz işletim sistemi bilgisi
-
-Uygulama kesin konum bilgisi toplamaz.
-
-Uygulama, çocuklardan bilerek kişisel olarak tanımlanabilir bilgi (ad, soyad, e-posta, telefon numarası vb.) talep etmez.
-
-Bilgilerin Kullanımı
-
-Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:
-
-Uygulamanın çalışmasını sağlamak
-
-Performans ve hata analizi yapmak
-
-Kullanıcı deneyimini geliştirmek
-
-Bu veriler reklam hedefleme veya profil oluşturma amacıyla kullanılmaz.
+Cihazın jailbreak veya root yapılması önerilmez. Bu tür işlemler, cihaz güvenliğini tehlikeye atabilir ve Uygulamanın düzgün çalışmamasına neden olabilir.
 
 Üçüncü Taraf Hizmetleri
 
-Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanabilir. Bu hizmetler yalnızca anonim ve toplu veriler işler ve kendi gizlilik politikalarına tabidir:
+Uygulama, kendi şart ve koşullarına sahip üçüncü taraf hizmetleri kullanabilir:
 
 Google Play Services
 
@@ -44,77 +28,61 @@ Google Analytics for Firebase
 
 Firebase Crashlytics
 
-Çocuklara yönelik içeriklerde Google’ın çocuklara uygun (Families / COPPA uyumlu) politikaları esas alınır.
+Bu hizmetler, Google’ın çocuklara uygun (Families / COPPA uyumlu) politikalarına göre yapılandırılır.
 
-Veri Saklama ve Silme
+İnternet ve Kullanım Sorumluluğu
 
-Veriler, uygulama kullanıldığı sürece ve sonrasında makul bir süre saklanır.
-Verilerin silinmesini talep etmek için:
+Uygulamanın bazı özellikleri aktif bir internet bağlantısı gerektirebilir.
+İnternet erişiminin olmaması, veri kotasının dolması veya operatör kaynaklı sorunlardan Hizmet Sağlayıcı sorumlu tutulamaz.
 
-📧 nazcadev@outlook.com
+Mobil veri kullanımı, dolaşım (roaming) ücretleri veya üçüncü taraf ücretleri kullanıcı sorumluluğundadır.
 
-Çocukların Gizliliği
+Cihaz Kullanımı
 
-Uygulama, çocukların gizliliğini korumayı esas alır.
-Çocuklardan bilerek kişisel veri toplanmaz. Yanlışlıkla böyle bir veri toplandığının fark edilmesi hâlinde, ilgili veriler derhal silinir.
+Cihazınızın şarjının bitmesi veya teknik sorunlar nedeniyle hizmete erişilememesinden Hizmet Sağlayıcı sorumlu değildir.
 
-Ebeveyn veya yasal vasiyseniz ve çocuğunuzla ilgili bir gizlilik talebiniz varsa, bizimle iletişime geçebilirsiniz.
+Sorumluluğun Sınırlandırılması
 
-Güvenlik
+Hizmet Sağlayıcı, Uygulamanın güncel ve doğru olması için makul çaba gösterir; ancak üçüncü taraflardan sağlanan bilgilere dayanılması sonucu oluşabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz.
 
-Hizmet Sağlayıcı, işlenen bilgileri korumak için uygun teknik ve idari güvenlik önlemleri uygular.
+Güncellemeler ve Sonlandırma
 
-Değişiklikler
+Uygulama zaman zaman güncellenebilir. Güncellemeleri kabul etmeyi kabul etmiş sayılırsınız.
+Hizmet Sağlayıcı, Uygulamayı dilediği zaman sonlandırabilir. Bu durumda Uygulamayı kullanmayı bırakmanız ve gerekirse cihazınızdan silmeniz gerekir.
 
-Bu Gizlilik Politikası zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlanır.
-Uygulamayı kullanmaya devam etmeniz, yapılan değişiklikleri kabul ettiğiniz anlamına gelir.
+Şartlarda Değişiklikler
+
+Bu Şartlar ve Koşullar zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlanır.
 
 Yürürlük tarihi: 11.01.2026
 
 İletişim
 
-Gizlilikle ilgili her türlü soru için:
+Şartlar ve Koşullar ile ilgili sorularınız için:
 
 📧 nazcadev@outlook.com
 
+🇬🇧 Terms & Conditions (Child-Friendly)
+Terms and Conditions
 
-English 🇬🇧
+These Terms and Conditions apply to the Kelime Yakalama mobile application (“Application”), provided as an Open Source service by Nazca Rieche (“Service Provider”).
 
-Privacy Policy
+By downloading or using the Application, you agree to these Terms. You are advised to read them carefully before use.
 
-The Kelime Yakalama application is provided as an Open Source service by Nazca Rieche (“Service Provider”) and is offered AS IS. The Application is suitable for all age groups, including children.
+Scope of Service
 
-Information Collection
+The Service Provider aims to keep the Application useful and efficient and reserves the right to modify, update, or discontinue the Application at any time. Any charges for the Application or related services will be clearly communicated in advance.
 
-While using the Application, the following information may be collected automatically:
+Data and Security
 
-Internet Protocol (IP) address
+The Application may process limited data solely to provide the service.
+You are responsible for maintaining the security of your device and access to the Application.
 
-In-app usage data (screens visited, date/time, duration of use)
-
-Total time spent in the Application
-
-Mobile device operating system
-
-The Application does not collect precise location data.
-
-The Application does not knowingly request or collect personally identifiable information (such as name, surname, email address, or phone number) from children.
-
-Use of Information
-
-The collected information is used solely for the following purposes:
-
-To ensure the proper functioning of the Application
-
-To perform performance monitoring and error analysis
-
-To improve the user experience
-
-This data is not used for advertising targeting or user profiling.
+Jailbreaking or rooting your device is not recommended, as it may compromise security and cause the Application to malfunction.
 
 Third-Party Services
 
-The Application may use the following third-party services, which process only aggregated and anonymized data and are subject to their own privacy policies:
+The Application may use third-party services with their own Terms and Conditions:
 
 Google Play Services
 
@@ -124,35 +92,36 @@ Google Analytics for Firebase
 
 Firebase Crashlytics
 
-For child-directed content, Google’s Families / COPPA-compliant policies are applied.
+These services are configured in accordance with Google’s Families / COPPA-compliant policies.
 
-Data Retention and Deletion
+Internet and Usage Responsibility
 
-Data is retained for as long as the Application is in use and for a reasonable period thereafter.
-To request deletion of data, please contact:
+Certain features of the Application require an active internet connection.
+The Service Provider is not responsible for reduced functionality due to lack of connectivity or exhausted data plans.
 
-📧 nazcadev@outlook.com
+Any data usage charges, roaming fees, or third-party costs are the responsibility of the user.
 
-Children’s Privacy
+Device Responsibility
 
-The Application places a high priority on protecting children’s privacy.
-No personal data is knowingly collected from children. If it is discovered that such data has been collected unintentionally, it will be deleted immediately.
+The Service Provider is not responsible if the Application cannot be accessed due to device battery depletion or technical issues.
 
-Parents or legal guardians may contact the Service Provider regarding any privacy-related concerns involving their children.
+Limitation of Liability
 
-Security
+While reasonable efforts are made to keep the Application accurate and up to date, the Service Provider accepts no liability for any direct or indirect loss resulting from reliance on third-party information.
 
-The Service Provider implements appropriate technical and administrative safeguards to protect the information processed and stored.
+Updates and Termination
 
-Changes
+The Application may be updated periodically, and you agree to accept such updates.
+The Service Provider may terminate the Application at any time, after which you must stop using and delete it if necessary.
 
-This Privacy Policy may be updated from time to time. The current version will always be published on this page.
-Continued use of the Application constitutes acceptance of any changes.
+Changes to These Terms
+
+These Terms and Conditions may be updated from time to time. The latest version will always be published on this page.
 
 Effective date: January 11, 2026
 
 Contact Us
 
-If you have any questions regarding privacy while using the Application, please contact the Service Provider at:
+If you have any questions about these Terms and Conditions, please contact:
 
 📧 nazcadev@outlook.com
