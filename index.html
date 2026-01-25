@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Catch - Kelime Yakalama Oyunu</title>
+    <title>Word Catcher | Kelime Yakalama</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <style>
@@ -19,12 +19,50 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+        
+        body.english {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            display: flex;
+            gap: 10px;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lang-btn {
+            padding: 8px 20px;
+            border: none;
+            background: transparent;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: #4f46e5;
+            color: white;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: #f1f5f9;
         }
         
         /* Header Styles */
@@ -36,6 +74,7 @@
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
         
         .header-container {
@@ -308,6 +347,11 @@
             .screenshot {
                 width: 200px;
             }
+            
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
         }
         
         /* Animation for hero */
@@ -327,50 +371,150 @@
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
+        
+        /* Language Content */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        /* Game Stats */
+        .game-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f59e0b;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
     </style>
 </head>
-<body>
+<body class="turkish">
+    <!-- Dil Değiştirici -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="tr">
+            <i class="fas fa-flag"></i> TR
+        </button>
+        <button class="lang-btn" data-lang="en">
+            <i class="fas fa-flag-usa"></i> EN
+        </button>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-gamepad"></i>
-                <span>Word Catch</span>
+                <span class="game-name">Kelime Yakalama</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#features">Özellikler</a></li>
-                    <li><a href="#screenshots">Ekran Görüntüleri</a></li>
-                    <li><a href="#download">İndir</a></li>
+                    <li><a href="#features" class="nav-features">Özellikler</a></li>
+                    <li><a href="#screenshots" class="nav-screenshots">Ekran Görüntüleri</a></li>
+                    <li><a href="#download" class="nav-download">İndir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section - Turkish -->
+    <section class="hero lang-content active" data-lang="tr">
         <div class="container">
-            <h1>Kelime Yakalama Macerası Başlıyor!</h1>
-            <p>Hızlı düşen kelimeleri yakala, puan topla ve kelime dağarcığını genişlet. Eğlenceli ve eğitici bu oyunla hem eğlen hem de öğren!</p>
+            <h1 class="hero-title">Kelime Yakalama Macerası Başlıyor!</h1>
+            <p class="hero-subtitle">Hızlı düşen kelimeleri yakala, puan topla ve kelime dağarcığını genişlet. Eğlenceli ve eğitici bu oyunla hem eğlen hem de öğren!</p>
             <a href="#download" class="cta-button">
                 <i class="fab fa-google-play"></i> Hemen Oyna
             </a>
             
+            <!-- Oyun İstatistikleri -->
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Seviye</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Kelime</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Puan</span>
+                </div>
+            </div>
+            
             <div class="hero-image">
-                <!-- Oyun görseli için placeholder -->
                 <div style="background: linear-gradient(135deg, #f59e0b, #ef4444); height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
-                    OYUN GÖRÜNTÜSÜ
+                    KELİME YAKALAMA OYUNU
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Hero Section - English -->
+    <section class="hero lang-content" data-lang="en">
+        <div class="container">
+            <h1 class="hero-title">Word Catcher Adventure Begins!</h1>
+            <p class="hero-subtitle">Catch fast-falling words, score points and expand your vocabulary. Have fun and learn with this entertaining and educational game!</p>
+            <a href="#download" class="cta-button">
+                <i class="fab fa-google-play"></i> Play Now
+            </a>
+            
+            <!-- Game Stats -->
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Levels</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Words</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                    WORD CATCHER GAME
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Turkish -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Neden Word Catch?</h2>
+            <h2 class="section-title lang-content active" data-lang="tr">Neden Kelime Yakalama?</h2>
+            <h2 class="section-title lang-content" data-lang="en">Why Word Catcher?</h2>
+            
             <div class="features-grid">
-                <div class="feature-card">
+                <!-- Özellik 1 - Turkish -->
+                <div class="feature-card lang-content active" data-lang="tr">
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
                     </div>
@@ -378,7 +522,17 @@
                     <p>Hızlı düşünce ve kelime tanıma becerilerinizi geliştirin. Her seviyede yeni kelimeler öğrenin.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Özellik 1 - English -->
+                <div class="feature-card lang-content" data-lang="en">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Brain Development</h3>
+                    <p>Improve your quick thinking and word recognition skills. Learn new words at every level.</p>
+                </div>
+                
+                <!-- Özellik 2 - Turkish -->
+                <div class="feature-card lang-content active" data-lang="tr">
                     <div class="feature-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
@@ -386,12 +540,31 @@
                     <p>Kolaydan zora kadar 50'den fazla seviye ile kendinizi sınayın. Her seviyede yeni zorluklar sizi bekliyor.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Özellik 2 - English -->
+                <div class="feature-card lang-content" data-lang="en">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Challenging Levels</h3>
+                    <p>Test yourself with over 50 levels from easy to hard. New challenges await you at every level.</p>
+                </div>
+                
+                <!-- Özellik 3 - Turkish -->
+                <div class="feature-card lang-content active" data-lang="tr">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Arkadaşlarınızla Yarışın</h3>
                     <p>Global liderlik tablosuna adınızı yazdırın. Arkadaşlarınızla puanlarınızı karşılaştırın.</p>
+                </div>
+                
+                <!-- Özellik 3 - English -->
+                <div class="feature-card lang-content" data-lang="en">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Compete with Friends</h3>
+                    <p>Put your name on the global leaderboard. Compare your scores with your friends.</p>
                 </div>
             </div>
         </div>
@@ -400,16 +573,21 @@
     <!-- Screenshots Section -->
     <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2 class="section-title">Ekran Görüntüleri</h2>
+            <h2 class="section-title lang-content active" data-lang="tr">Ekran Görüntüleri</h2>
+            <h2 class="section-title lang-content" data-lang="en">Screenshots</h2>
+            
             <div class="screenshot-container">
                 <div class="screenshot" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); height: 500px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-                    OYUN EKRANI 1
+                    <span class="lang-content active" data-lang="tr">OYUN EKRANI 1</span>
+                    <span class="lang-content" data-lang="en">GAME SCREEN 1</span>
                 </div>
                 <div class="screenshot" style="background: linear-gradient(135deg, #10b981, #3b82f6); height: 500px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-                    OYUN EKRANI 2
+                    <span class="lang-content active" data-lang="tr">OYUN EKRANI 2</span>
+                    <span class="lang-content" data-lang="en">GAME SCREEN 2</span>
                 </div>
                 <div class="screenshot" style="background: linear-gradient(135deg, #f59e0b, #ef4444); height: 500px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-                    OYUN EKRANI 3
+                    <span class="lang-content active" data-lang="tr">OYUN EKRANI 3</span>
+                    <span class="lang-content" data-lang="en">GAME SCREEN 3</span>
                 </div>
             </div>
         </div>
@@ -419,20 +597,25 @@
     <section class="download" id="download">
         <div class="container">
             <div class="download-container">
-                <h2>Hemen İndirin ve Oynamaya Başlayın!</h2>
-                <p>Word Catch'i şimdi Play Store'dan indirin ve kelime yakalama macerasına başlayın. Ücretsiz ve reklamsız!</p>
+                <!-- Turkish -->
+                <h2 class="lang-content active" data-lang="tr">Hemen İndirin ve Oynamaya Başlayın!</h2>
+                <h2 class="lang-content" data-lang="en">Download Now and Start Playing!</h2>
                 
-                <!-- PLAY STORE LİNKİ BURAYA GELECEK -->
-                <a href="https://play.google.com/store/apps/details?id=com.sirketiniz.oyunadiniz" class="play-store-button" target="_blank">
-                    <!-- Google Play ikonu -->
+                <p class="lang-content active" data-lang="tr">Kelime Yakalama'yı şimdi Play Store'dan indirin ve kelime yakalama macerasına başlayın. Ücretsiz ve reklamsız!</p>
+                <p class="lang-content" data-lang="en">Download Word Catcher from Play Store now and start your word-catching adventure. Free and ad-free!</p>
+                
+                <!-- PLAY STORE LINK -->
+                <a href="https://play.google.com/store/apps/details?id=com.nazcadev.kelimeyakalama" class="play-store-button" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
                         <path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-1.163.409l11.257 10.385zm0 2.067l-11.257 10.385c.299.276.685.425 1.101.425.312 0 .615-.089.878-.257l13.337-7.54-3.258-3.229z"/>
                     </svg>
-                    <span>Google Play'den İndir</span>
+                    <span class="lang-content active" data-lang="tr">Google Play'den İndir</span>
+                    <span class="lang-content" data-lang="en">Download on Google Play</span>
                 </a>
                 
                 <p style="margin-top: 20px; font-size: 0.9rem; color: #94a3b8;">
-                    Android 5.0 ve üzeri sürümleri destekler
+                    <span class="lang-content active" data-lang="tr">Android 5.0 ve üzeri sürümleri destekler</span>
+                    <span class="lang-content" data-lang="en">Supports Android 5.0 and above</span>
                 </p>
             </div>
         </div>
@@ -444,26 +627,101 @@
             <div class="footer-content">
                 <div class="logo" style="color: white;">
                     <i class="fas fa-gamepad"></i>
-                    <span>Word Catch</span>
+                    <span class="game-name">Kelime Yakalama</span>
                 </div>
                 
-                <p>Eğlenirken öğrenmek için en iyi kelime oyunu</p>
+                <p class="lang-content active" data-lang="tr">Eğlenirken öğrenmek için en iyi kelime oyunu</p>
+                <p class="lang-content" data-lang="en">The best word game for learning while having fun</p>
                 
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+                <a href="https://instagram.com/nazcadev" target="_blank"><i class="fab fa-instagram"></i></a>                </div>
                 
                 <div class="copyright">
-                    &copy; 2023 Word Catch. Tüm hakları saklıdır.
+                    <span class="lang-content active" data-lang="tr">&copy; 2026 Kelime Yakalama. Tüm hakları saklıdır.</span>
+                    <span class="lang-content" data-lang="en">&copy; 2026 Word Catcher. All rights reserved.</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // Dil değiştirme fonksiyonu
+        function changeLanguage(lang) {
+            // Tüm dil içeriklerini gizle
+            document.querySelectorAll('.lang-content').forEach(element => {
+                element.classList.remove('active');
+            });
+            
+            // Seçili dili göster
+            document.querySelectorAll(`.lang-content[data-lang="${lang}"]`).forEach(element => {
+                element.classList.add('active');
+            });
+            
+            // Dil butonlarını güncelle
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Body class'ını güncelle
+            document.body.className = lang;
+            
+            // Oyun ismini güncelle
+            const gameNameElement = document.querySelector('.game-name');
+            if(lang === 'tr') {
+                gameNameElement.textContent = 'Kelime Yakalama';
+                document.title = 'Kelime Yakalama Oyunu';
+            } else {
+                gameNameElement.textContent = 'Word Catcher';
+                document.title = 'Word Catcher Game';
+            }
+            
+            // Header navigasyon metinlerini güncelle
+            updateNavigationTexts(lang);
+            
+            // Dil tercihini localStorage'a kaydet
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Navigasyon metinlerini güncelle
+        function updateNavigationTexts(lang) {
+            const navFeatures = document.querySelector('.nav-features');
+            const navScreenshots = document.querySelector('.nav-screenshots');
+            const navDownload = document.querySelector('.nav-download');
+            
+            if(lang === 'tr') {
+                navFeatures.textContent = 'Özellikler';
+                navScreenshots.textContent = 'Ekran Görüntüleri';
+                navDownload.textContent = 'İndir';
+            } else {
+                navFeatures.textContent = 'Features';
+                navScreenshots.textContent = 'Screenshots';
+                navDownload.textContent = 'Download';
+            }
+        }
+        
+        // Dil butonlarına tıklama olayı
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                changeLanguage(lang);
+            });
+        });
+        
+        // Sayfa yüklendiğinde dil tercihini kontrol et
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
+            changeLanguage(savedLang);
+            
+            // Play Store linkini güncelle
+            const playStoreLink = "https://play.google.com/store/apps/details?id=com.nazcadev.kelimeyakalama";
+            document.querySelectorAll('.play-store-button, .cta-button').forEach(button => {
+                button.setAttribute('href', playStoreLink);
+            });
+        });
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -478,24 +736,6 @@
             });
         });
         
-        // Update Play Store link dynamically
-        function updatePlayStoreLink() {
-            // Buraya gerçek Play Store linkinizi yazın
-            const playStoreLink = "https://play.google.com/store/apps/details?id=com.sirketiniz.oyunadiniz";
-            
-            // Tüm Play Store butonlarını güncelle
-            document.querySelectorAll('.play-store-button, .cta-button').forEach(button => {
-                if(button.classList.contains('play-store-button') || button.classList.contains('cta-button')) {
-                    button.setAttribute('href', playStoreLink);
-                }
-            });
-            
-            console.log("Play Store linki güncellendi: " + playStoreLink);
-        }
-        
-        // Sayfa yüklendiğinde linki güncelle
-        document.addEventListener('DOMContentLoaded', updatePlayStoreLink);
-        
         // Header scroll efekti
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -507,6 +747,12 @@
                 header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
             }
         });
+        
+        // Varsayılan olarak Türkçe dilini yükle
+        window.onload = function() {
+            const defaultLang = localStorage.getItem('preferredLanguage') || 'tr';
+            changeLanguage(defaultLang);
+        };
     </script>
 </body>
 </html>
